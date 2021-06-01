@@ -8,6 +8,12 @@ Please go to the page of the competition on the AIdea [here](https://aidea-web.t
 - `./train_cdc/train_images/`: 訓練所需的影像資料（JPG格式），共 2671 張。
 - `./test_cdc/test_images/`：測試所需的影像資料（JPG格式），共 2248 張(包含 test_pub_cdc.zip 的資料)。
 
+Please run `utils.py` with `python3 utils.py`command to obtain the following files:
+
+- `./data_tables/table_tr.txt`
+- `./data_tables/table_va.txt`
+- `./data_tables/table_te.txt`
+
 ## Codes
 
 - `args.py` defines the argument parser.
