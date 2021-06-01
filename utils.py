@@ -62,8 +62,10 @@ def data_splitting(out:list, val_size:float, test_size:float):
     out_va, out_te = train_test_split(out_, test_size=test_size/(val_size+test_size), stratify=n_objects_rough_)
     return out_tr, out_va, out_te
 
-def save_txt(out:list, subset:str):
-    with open(subset+'.txt', 'w') as f:
+def save_txt(out:list, savePATH:str, fn:str):
+    if not os.path.exists(savePATH):
+        os.mkdir(savePATH)
+    with open(savePATH + fn + '.txt', 'w') as f:
         for row in out:
             f.write(row + '\n')
 
@@ -71,6 +73,6 @@ if __name__ == '__main__':
     args = init_arguments().parse_args()
     out = load_xml(args.FOLDERxml)
     out_tr, out_va, out_te = data_splitting(out, args.val_size, args.test_size)
-    save_txt(out_tr, 'train')
-    save_txt(out_va, 'val')
-    save_txt(out_te, 'test')
+    save_txt(out_tr, args.dataPATH, 'table_tr')
+    save_txt(out_va, args.dataPATH, 'table_va')
+    save_txt(out_te, args.dataPATH, 'table_te')
