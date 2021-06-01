@@ -10,6 +10,7 @@ Please go to the page of the competition on the AIdea [here](https://aidea-web.t
 
 ## Codes
 
+- `args.py` defines the argument parser.
 - `utils.py`: tools for data loading 
 
 ## Usage
