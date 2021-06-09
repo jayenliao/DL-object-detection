@@ -242,27 +242,3 @@ class Trainer:
             fn = self.folder_name + plot_type + '_plot.png'
             plt.savefig(fn)
             print('The', plot_type, 'plot is saved as', fn)
-
-'''
-# Data parameters
-data_folder = '../train_cdc/train_img'  # folder with data files
-keep_difficult = True  # use objects considered difficult to detect?
-
-# Model parameters
-# Not too many here since the SSD300 has a very specific structure
-n_classes = len(label_map)  # number of different types of objects
-device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
-
-# Learning parameters
-checkpoint = None  # path to model checkpoint, None if none
-batch_size = 8  # batch size
-iterations = 120000  # number of iterations to train
-workers = 4  # number of workers for loading data in the DataLoader
-print_freq = 200  # print training status every __ batches
-lr = 1e-3  # learning rate
-decay_lr_at = [80000, 100000]  # decay learning rate after these many iterations
-decay_lr_to = 0.1  # decay learning rate to this fraction of the existing learning rate
-momentum = 0.9  # momentum
-weight_decay = 5e-4  # weight decay
-grad_clip = None  # clip if gradients are exploding, which may happen at larger batch sizes (sometimes at 32) - you will recognize it by a sorting error in the MuliBox loss calculation
-'''
