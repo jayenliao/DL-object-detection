@@ -1,14 +1,10 @@
-import json, os, random
-import xml.etree.ElementTree as ET
-import torch
-import torchvision.transforms.functional as FT
+import json, os, random, torch
 import pandas as pd
+import xml.etree.ElementTree as ET
+import torchvision.transforms.functional as FT
 from xml.dom import minidom
 from args import get_args
 from sklearn.model_selection import train_test_split
-
-#device = get_args().parse_args().device
-#device = torch.device(device if torch.cuda.is_available() else 'cpu')
 
 # Label map
 voc_labels = (
