@@ -61,13 +61,19 @@ python3 main.py -d 'cuda:1' -dt '09-11-39-53__bs=8_epochs=500/' -cp 'checkpoint_
 The hyper-paramete `min_score` when prediction can be adjusted with `-ms` command. 
 
 ```
-python3 predict.py -d 'cuda' -dt '08-23-02-56_abs=8_epochs=2000/' -cp 'checkpoint_ssd300.pth.tar' -ms .01
+python3 predict.py -d 'cuda' -dt '08-23-02-56__bs=8_epochs=2000/' -cp 'checkpoint_ssd300.pth.tar' -ms .01
 ```
 
 - To get several annotated images (images from `./test_cdc/test_images/`)
 
 ```
-python3 predict.py -d 'cuda' -dt '08-23-02-56_abs=8_epochs=2000/' -cp 'checkpoint_ssd300.pth.tar' -detect
+python3 predict.py -d 'cuda' -dt '08-23-02-56__bs=8_epochs=2000/' -cp 'checkpoint_ssd300.pth.tar' -detect
 ```
 
+## Examples of annotated images
 
+![](./annotated_images/annotated_200812053.jpg)
+![](./annotated_images/annotated_201209052.jpg)
+![](./annotated_images/annotated_201307104.jpg)
+![](./annotated_images/annotated_201507034.jpg)
+![](./annotated_images/annotated_2015022510.jpg)
