@@ -5,15 +5,15 @@ def get_args():
     parser = argparse.ArgumentParser(prog='Deep Learning - HW6: Object Detection')
 
    # Data
-    parser.add_argument('-Pdt', '--dtPATH', type=str, default='../data_tables/')
-    parser.add_argument('-xml', '--FOLDERxml', type=str, default='../train_cdc/train_annotations/')
-    parser.add_argument('-Ptr', '--trainPATH', type=str, default='../train_cdc/train_images/')
-    parser.add_argument('-Pte', '--testPATH', type=str, default='../test_cdc/test_images/')
+    parser.add_argument('-Pdt', '--dtPATH', type=str, default='./data_tables/')
+    parser.add_argument('-xml', '--FOLDERxml', type=str, default='./train_cdc/train_annotations/')
+    parser.add_argument('-Ptr', '--trainPATH', type=str, default='./train_cdc/train_images/')
+    parser.add_argument('-Pte', '--testPATH', type=str, default='./test_cdc/test_images/')
 
     # General
     parser.add_argument('-s', '--seed', type=int, default=4028)
     parser.add_argument('-v', '--verbose', action='store_true')
-    parser.add_argument('-Ps', '--savePATH', type=str, default='../output/', help='The path to store the outputs, including models, plots, and training and evalution results.')
+    parser.add_argument('-Ps', '--savePATH', type=str, default='./output/', help='The path to store the outputs, including models, plots, and training and evalution results.')
     parser.add_argument('-pm', '--pretrained_model', type=str, default='yolov4', choices=['yolov4'])
 
     # Data augmentation
