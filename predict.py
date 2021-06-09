@@ -238,6 +238,16 @@ def predict(args):
         return out_dict
 
 
+def box_corner_to_center(ymin, xmin, ymax, xmax):
+    # Convert from (upper_left, bottom_right) to (center, width, height)
+
+    y1, x1, y2, x2 = ymin, xmin, ymax, xmax
+    w = x2 - x1
+    h = y2 - y1
+
+    return x1, y1, w, h
+
+
 if __name__ == '__main__':
     args = get_args().parse_args()
     dt = datetime.now().strftime('%d-%H-%M-%S')
@@ -248,6 +258,7 @@ if __name__ == '__main__':
         out_dict = predict(args)
         df = pd.DataFrame(out_dict)
         fn = args.savePATH + args.dt + 'output_ms=' + str(args.min_score) + '_transform=' + str(args.transform) + '_' + dt + '.csv'
+        df['x'], df['y'], df['w'], df['h'] = box_corner_to_center(df['y'], df['x'], df['h'], df['w'])
         df.loc[df.label_id != 0,:].to_csv(fn, index=None)
         print('The output file has been saved as')
         print('-->', fn)
