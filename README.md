@@ -77,3 +77,8 @@ python3 predict.py -d 'cuda' -dt '08-23-02-56__bs=8_epochs=2000/' -cp 'checkpoin
 ![](./annotated_images/annotated_201209052.jpg)
 ![](./annotated_images/annotated_201307104.jpg)
 ![](./annotated_images/annotated_201507034.jpg)
+
+## Reference
+
+1. Erhan, D., Szegedy, C., Toshev, A., & Anguelov, D. (2014). Scalable object detection using deep neural networks. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 2147-2154).
+2. https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Object-Detection
