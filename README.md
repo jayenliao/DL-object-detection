@@ -1,5 +1,7 @@
 # DL-object-detection
 
+This is assignment 6 of Deep Learning, a course at Institute of Data Science, National Cheng Kung University. This project aims to utilize deep learning techniques to perform object detection. We implement with PyTorch.
+
 ## Codes
 
 - `main.py`: the main program for training and evaluation
@@ -72,8 +74,6 @@ python3 predict.py -d 'cuda' -dt '08-23-02-56__bs=8_epochs=2000/' -cp 'checkpoin
 
 ## Examples of annotated images
 
-![](./annotated_images/annotated_200812053.jpg)
 ![](./annotated_images/annotated_201209052.jpg)
 ![](./annotated_images/annotated_201307104.jpg)
 ![](./annotated_images/annotated_201507034.jpg)
-![](./annotated_images/annotated_2015022510.jpg)
