@@ -68,7 +68,7 @@ def object_counts(out, rough=True):
         return n_objects
 
 
-def create_data_lists_subset(subset:str, dtPATH='../data_tables/', labelPATH='../train_cdc/train_annotations/', imgPATH='../train_cdc/train_images/'):
+def create_data_lists_subset(subset:str, dtPATH='./data_tables/', labelPATH='./train_cdc/train_annotations/', imgPATH='./train_cdc/train_images/'):
     '''
     Create lists of images, the bounding boxes and labels of the objects in these images, and save these to file.
 
