@@ -8,9 +8,9 @@ def main(args):
     if not os.path.exists(args.dtPATH + 'table_tr.txt'):
         out = load_xml(args.FOLDERxml)
         out_tr, out_va, out_te = data_splitting(out, args.val_size, args.test_size)
-        save_txt(out_tr, args.dataPATH, 'table_tr')
-        save_txt(out_va, args.dataPATH, 'table_va')
-        save_txt(out_te, args.dataPATH, 'table_te')
+        save_txt(out_tr, args.dtPATH, 'table_tr')
+        save_txt(out_va, args.dtPATH, 'table_va')
+        save_txt(out_te, args.dtPATH, 'table_te')
     
     # If the json files have not been produced,
     if not os.path.exists(args.dtPATH + 'objects_tr.json'):
