@@ -113,7 +113,7 @@ def create_data_lists_subset(subset:str, dtPATH='./data_tables/', labelPATH='./t
         len(train_images), n_objects, os.path.abspath(dtPATH)))
 
 
-def create_data_lists(subsets=['tr', 'va', 'te'], dtPATH='../data_tables/', labelPATH='../train_cdc/train_annotations/', imgPATH='../train_cdc/train_images/'):
+def create_data_lists(subsets=['tr', 'va', 'te'], dtPATH='./data_tables/', labelPATH='./train_cdc/train_annotations/', imgPATH='./train_cdc/train_images/'):
     for subset in subsets:
         create_data_lists_subset(subset, dtPATH, labelPATH, imgPATH)
 
