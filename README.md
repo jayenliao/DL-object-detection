@@ -50,7 +50,7 @@ python3 main.py -d 'cuda:1' -e 1000
 
 - To train from a checkpoint
 
-```
+```bash
 python3 main.py -d 'cuda:1' -dt '09-11-39-53__bs=8_epochs=500/' -cp 'checkpoint_ssd300.pth.tar' -e 500
 ```
 
@@ -62,13 +62,13 @@ python3 main.py -d 'cuda:1' -dt '09-11-39-53__bs=8_epochs=500/' -cp 'checkpoint_
 
 The hyper-paramete `min_score` when prediction can be adjusted with `-ms` command. 
 
-```
+```bash
 python3 predict.py -d 'cuda' -dt '08-23-02-56__bs=8_epochs=2000/' -cp 'checkpoint_ssd300.pth.tar' -ms .01
 ```
 
 - To get several annotated images (images from `./test_cdc/test_images/`)
 
-```
+```bash
 python3 predict.py -d 'cuda' -dt '08-23-02-56__bs=8_epochs=2000/' -cp 'checkpoint_ssd300.pth.tar' -detect
 ```
 
