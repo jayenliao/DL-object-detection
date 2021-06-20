@@ -60,7 +60,7 @@ python3 main.py -d 'cuda:1' -dt '09-11-39-53__bs=8_epochs=500/' -cp 'checkpoint_
 
 - To get the prediction csv file
 
-The hyper-paramete `min_score` when prediction can be adjusted with `-ms` command. 
+The hyper-parameter `min_score` used in the prediction can be adjusted with `-ms` command. 
 
 ```bash
 python3 predict.py -d 'cuda' -dt '08-23-02-56__bs=8_epochs=2000/' -cp 'checkpoint_ssd300.pth.tar' -ms .01
